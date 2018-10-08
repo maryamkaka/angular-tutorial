@@ -7,6 +7,7 @@ import { HEROS } from '../mock-heros';
 	templateUrl: './heroes.component.html',
 	styleUrls: ['./heroes.component.css']
 })
+
 export class HeroesComponent implements OnInit {
 
 	heros = HEROS;
@@ -19,5 +20,4 @@ export class HeroesComponent implements OnInit {
 	protected onSelect(hero: Hero): void {
 		this.selectedHero = hero;
 	}
-
 }
