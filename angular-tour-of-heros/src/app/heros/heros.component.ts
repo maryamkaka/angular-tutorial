@@ -12,18 +12,12 @@ export class HerosComponent implements OnInit {
 
 	heros: Hero[];
 
-	protected selectedHero;
-
 	constructor(
 		private readonly heroService: HeroService
 	) { }
 
 	ngOnInit() {
 		this.getHeros();
-	}
-
-	protected onSelect(hero: Hero): void {
-		this.selectedHero = hero;
 	}
 
 	protected getHeros() {
