@@ -4,18 +4,18 @@ import { HeroService } from '../hero.service';
 
 @Component({
 	selector: 'app-heroes',
-	templateUrl: './heroes.component.html',
-	styleUrls: ['./heroes.component.css']
+	templateUrl: './heros.component.html',
+	styleUrls: ['./heros.component.css']
 })
 
-export class HeroesComponent implements OnInit {
+export class HerosComponent implements OnInit {
 
 	heros: Hero[];
 
-	protected _selectedHero;
+	protected selectedHero;
 
 	constructor(
-		private readonly _heroService: HeroService
+		private readonly heroService: HeroService
 	) { }
 
 	ngOnInit() {
@@ -23,11 +23,11 @@ export class HeroesComponent implements OnInit {
 	}
 
 	protected onSelect(hero: Hero): void {
-		this._selectedHero = hero;
+		this.selectedHero = hero;
 	}
 
 	protected getHeros() {
-		this._heroService.getHeros()
+		this.heroService.getHeros()
 			.subscribe(heros => this.heros = heros);
 	}
 }

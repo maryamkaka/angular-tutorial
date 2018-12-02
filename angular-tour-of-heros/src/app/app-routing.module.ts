@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
-import { HeroesComponent as HerosComponent } from './heroes/heroes.component';
+import { HerosComponent as HerosComponent } from './heros/heros.component';
 // ng generate module app-routing --flat --module=app
 // flat -> puts the file in src/app 
 // module=app register it as part of the AppModule 
